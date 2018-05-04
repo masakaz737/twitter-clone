@@ -1,0 +1,65 @@
+p{
+  word-wrap: break-word;
+}
+
+.index h1{
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+.row{
+  width: 100%;
+  margin: 0;
+  padding: 0 20%;
+}
+
+.states{
+  width: 60%;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 2px 6px #c1ced7;
+  padding: 10px;
+  text-align: left;
+}
+
+.state{
+  font-size: 20px;
+  width: 100%;
+}
+
+.alert{
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+}
+
+.alert ul{
+background-color: white;
+padding: 0 10px;
+} 
+
+.alert li{
+  font-size: 20px;
+  list-style: none;
+}
+
+.index{
+  width: 100%;
+  margin: 0;
+  padding-bottom: 60px;
+}
+
+.state-content{
+  width: 60%;
+  margin:20px auto;
+  text-align: left;
+}
+
+.form-label{
+  font-size: 20px;
+}
+
+.form-control{
+  width: 100%;
+  margin: 0 auto;
+}

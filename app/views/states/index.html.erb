@@ -1,0 +1,19 @@
+<div class="index">
+
+  <h1>イキList</h1>
+
+  <p><%= notice %></p>
+
+  <% @states.each do |state| %>
+   
+    <div class="states">
+        <p class="state"><%= state.content %></p>
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default"><%= link_to "イキり直す", edit_state_path(state.id) %></button>
+        <button type="button" class="btn btn-default"><%= link_to "削除", state_path(state.id), method: :delete, data: { confirm: '本当に削除していいですか？' } %></button>
+      </div>
+    </div>
+    
+  <% end %>
+
+</div>

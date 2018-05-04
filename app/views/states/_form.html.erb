@@ -1,0 +1,19 @@
+<%= form_with(model: @state, local: true, url: choose_new_or_failure ) do |form| %>
+    <% if @state.errors.any? %>
+    <div class = "alert alert-danger" role="alert" id="error_explanation">
+        <p><%= @state.errors.count %>件のエラーがあります。</p>
+        <ul>
+            <% @state.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+
+
+    <div class="state-content">
+        <%= form.label :content, "イキって下さい", class: "form-label" %>
+        <%= form.text_field :content, class: "form-control", placeholder: "イキりを入力" %>
+    </div>
+    <%= form.submit "イキる", class: "btn btn-default submit-button" %>
+<% end %>

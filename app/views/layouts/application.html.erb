@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ikitter</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+  <div class="container"> 
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/"><i class="fab fa-twitter"></i>Ikitter</a>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "/" do %><i class="fas fa-home"> ホーム</i><% end %></li>
+            <li><%= link_to states_path do %><i class="fas fa-list-ul"> イキList</i><% end %></li>
+            <li><%= link_to new_state_path do %><i class="fas fa-bolt"> イキる</i><% end %></li>
+          </ul>
+          <a class="navbar-brand" href="/"><i class="fas fa-dove"></i></a>
+        </div>
+    </nav>
+
+    <%= yield %>
+    
+    <footer>
+        <p class="footer_inner">Dive into Code test application</p>
+    </footer>
+  </div> 
+  </body>
+</html>

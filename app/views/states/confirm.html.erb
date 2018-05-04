@@ -1,0 +1,13 @@
+<h3>以下の内容で、送信する。</h3>
+
+<%= form_with(model: @state, url: states_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  
+  <p>内容：<%= @state.content %></p>
+  <%= form.submit "イキる", class: "btn btn-default" %>
+<% end %>
+
+<%= form_with(model: @state, url: new_state_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :content %>
+  <%= form.submit "もどる", name: 'back', class: "btn btn-default" %>
+<% end %>
